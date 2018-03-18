@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Window
         window                     = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = CustomerListViewController()
+        window?.rootViewController = CustomerViewController()
         window?.makeKeyAndVisible()
         
         return true

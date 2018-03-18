@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B60D0655205ECA6400046D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D0654205ECA6400046D9E /* AppDelegate.swift */; };
-		B60D0657205ECA6400046D9E /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D0656205ECA6400046D9E /* CustomerListViewController.swift */; };
+		B60D0657205ECA6400046D9E /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D0656205ECA6400046D9E /* CustomerViewController.swift */; };
 		B60D065A205ECA6400046D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60D0658205ECA6400046D9E /* Main.storyboard */; };
 		B60D065C205ECA6400046D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60D065B205ECA6400046D9E /* Assets.xcassets */; };
 		B60D065F205ECA6400046D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60D065D205ECA6400046D9E /* LaunchScreen.storyboard */; };
+		B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066A205F145900046D9E /* CustomerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B60D0651205ECA6400046D9E /* Seguros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seguros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60D0654205ECA6400046D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B60D0656205ECA6400046D9E /* CustomerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
+		B60D0656205ECA6400046D9E /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		B60D0659205ECA6400046D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B60D065B205ECA6400046D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B60D065E205ECA6400046D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B60D0660205ECA6400046D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60D066A205F145900046D9E /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,8 @@
 		B60D0668205EED4500046D9E /* Customer */ = {
 			isa = PBXGroup;
 			children = (
-				B60D0656205ECA6400046D9E /* CustomerListViewController.swift */,
+				B60D0656205ECA6400046D9E /* CustomerViewController.swift */,
+				B60D066A205F145900046D9E /* CustomerTableViewCell.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -152,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60D0657205ECA6400046D9E /* CustomerListViewController.swift in Sources */,
+				B60D0657205ECA6400046D9E /* CustomerViewController.swift in Sources */,
 				B60D0655205ECA6400046D9E /* AppDelegate.swift in Sources */,
+				B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
