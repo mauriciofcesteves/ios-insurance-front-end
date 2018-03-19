@@ -15,6 +15,7 @@ class CustomerViewController: UIViewController {
     public static var padding: CGFloat = 20.0
     
     fileprivate let cellId = "cellId"
+    fileprivate var customers:[Customer]?
     
     /** The image view. */
     public let logoImageView: UIImageView = {
@@ -67,6 +68,38 @@ class CustomerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        navigationItem.title = "REST API"
+        
+        //Implementing URLSession
+        let urlString = "http://localhost:8080/customers/"
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else { return }
+            
+            //Implement JSON decoding and parsing
+            do {
+                //Decode retrived data with JSONDecoder and assing type of Article object
+                let customersData = try JSONDecoder().decode([Customer].self, from: data)
+                
+                //Get back to the main queue
+                DispatchQueue.main.async {
+                    //print(articlesData)
+                    self.customers = customersData
+                    self.tableView.reloadData()
+                }
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            }.resume()
+        //End implementing URLSession
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,14 +132,14 @@ class CustomerViewController: UIViewController {
 extension CustomerViewController: UITableViewDataSource {
     // MARK: - UITableViewDataSource
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return customers?.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CustomerTableViewCell {
             
-            cell.update("Teste")
+            cell.update(customers?[indexPath.item].nome)
             
             return cell
         }
