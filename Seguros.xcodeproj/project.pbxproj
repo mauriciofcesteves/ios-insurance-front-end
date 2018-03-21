@@ -14,6 +14,7 @@
 		B60D065F205ECA6400046D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60D065D205ECA6400046D9E /* LaunchScreen.storyboard */; };
 		B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066A205F145900046D9E /* CustomerTableViewCell.swift */; };
 		B60D066E205F41FA00046D9E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066D205F41FA00046D9E /* Customer.swift */; };
+		B60D06702061F7C900046D9E /* CompareFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066F2061F7C900046D9E /* CompareFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B60D0660205ECA6400046D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60D066A205F145900046D9E /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		B60D066D205F41FA00046D9E /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		B60D066F2061F7C900046D9E /* CompareFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B60D0658205ECA6400046D9E /* Main.storyboard */,
 				B60D065D205ECA6400046D9E /* LaunchScreen.storyboard */,
 				B60D0660205ECA6400046D9E /* Info.plist */,
+				B60D066F2061F7C900046D9E /* CompareFonts.swift */,
 			);
 			path = Seguros;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				B60D0657205ECA6400046D9E /* CustomerViewController.swift in Sources */,
 				B60D0655205ECA6400046D9E /* AppDelegate.swift in Sources */,
 				B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */,
+				B60D06702061F7C900046D9E /* CompareFonts.swift in Sources */,
 				B60D066E205F41FA00046D9E /* Customer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

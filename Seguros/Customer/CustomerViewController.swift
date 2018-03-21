@@ -138,8 +138,14 @@ extension CustomerViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CustomerTableViewCell {
+            let name      = customers?[indexPath.item].nome
+            let cpfCnpj   = customers?[indexPath.item].cpf != "" ? customers?[indexPath.item].cpf : customers?[indexPath.item].cnpj
+            let company   = customers?[indexPath.item].seguradora
+            let carPlate  = customers?[indexPath.item].placa
+            let startDate = customers?[indexPath.item].vigenciaInicio
+            let endDate   = customers?[indexPath.item].vigenciaFim
             
-            cell.update(customers?[indexPath.item].nome)
+            cell.update(name, id: cpfCnpj, company: company, carPlate: carPlate, period: "\(startDate ?? "NA") - \(endDate ?? "NA")")
             
             return cell
         }
