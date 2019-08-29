@@ -22,7 +22,7 @@ class CustomerViewController: UIViewController {
         
         let imageView                                       = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image                                     = UIImage(named: "EstevesCorretoraLogo")
+        imageView.image                                     = #imageLiteral(resourceName: "EstevesCorretoraLogo")
         imageView.contentMode                               = .scaleAspectFit
         
         return imageView
