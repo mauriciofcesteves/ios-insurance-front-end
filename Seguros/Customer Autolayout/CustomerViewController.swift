@@ -15,7 +15,7 @@ class CustomerViewController: UIViewController {
     public static var padding: CGFloat = 20.0
     
     fileprivate let cellId = "cellId"
-    fileprivate var customers:[Customer]?
+    fileprivate var customers: [Customer]?
     
     /** The image view. */
     public let logoImageView: UIImageView = {
@@ -59,7 +59,6 @@ class CustomerViewController: UIViewController {
     }
     
     fileprivate func navigation(_ customerViewController: UIViewController) -> UINavigationController {
-        
         let controller                    = UINavigationController(rootViewController: customerViewController)
         controller.navigationBar.isHidden = true
         return controller
@@ -67,41 +66,82 @@ class CustomerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        fetchCustomers()
+    }
 
-        navigationItem.title = "REST API"
+    /** Do a REST call to fetch the Customers */
+    func fetchCustomers() {
+        navigationItem.title = "List of Customers (Autolayout)"
         
         //Implementing URLSession
         let urlString = "http://localhost:8080/customers/"
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else {
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
+                
+                guard let customers = self.loadCustomers() else {
+                    print("Error loading local JSON")
+                    return
+                }
+                
+                self.updateCustomerDataTable(customers)
+                return
             }
             
-            guard let data = data else { return }
+            guard let data = data else {
+                return
+            }
             
-            //Implement JSON decoding and parsing
+            //JSON decoding and parsing implementation
             do {
                 //Decode retrived data with JSONDecoder and assing type of Article object
                 let customersData = try JSONDecoder().decode([Customer].self, from: data)
-                
-                //Get back to the main queue
-                DispatchQueue.main.async {
-                    //print(articlesData)
-                    self.customers = customersData
-                    self.tableView.reloadData()
-                }
+                self.updateCustomerDataTable(customersData)
                 
             } catch let jsonError {
                 print(jsonError)
             }
             
             }.resume()
-        //End implementing URLSession
+        //End of URLSession implementation
     }
-
+    
+    /** Load customers from local json */
+    func loadCustomers() -> [Customer]? {
+        
+        var customers: [Customer]?
+        if let path = Bundle.main.path(forResource: "customers", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let parsedCustomers = try JSONDecoder().decode([Customer].self, from: data)
+                
+                customers = []
+                for parsedCustomer in parsedCustomers {
+                    customers?.append(parsedCustomer)
+                }
+                
+            } catch let jsonError {
+                print("JSON decoder error: \(jsonError)")
+            }
+        }
+        
+        return customers
+    }
+    
+    func updateCustomerDataTable(_ customers: [Customer]) {
+        //Return to the main queue
+        DispatchQueue.main.async {
+            self.customers = customers
+            self.tableView.reloadData()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -138,8 +178,10 @@ extension CustomerViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CustomerTableViewCell {
-            let name      = customers?[indexPath.item].nome
+            //customer id
             let cpfCnpj   = customers?[indexPath.item].cpf != "" ? customers?[indexPath.item].cpf : customers?[indexPath.item].cnpj
+            
+            let name      = customers?[indexPath.item].nome
             let company   = customers?[indexPath.item].seguradora
             let carPlate  = customers?[indexPath.item].placa
             let startDate = customers?[indexPath.item].vigenciaInicio

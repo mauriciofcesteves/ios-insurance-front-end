@@ -20,7 +20,7 @@ open class CustomerTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(#imageLiteral(resourceName: "trash"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
-        //        button.addTarget(self, action: #selector(productCollectionViewCellDidPressButton), for: .touchUpInside)
+//      button.addTarget(self, action: #selector(productCollectionViewCellDidPressButton), for: .touchUpInside)
         return button
     }()
     
@@ -31,7 +31,7 @@ open class CustomerTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor                                 = UIColor.black
         label.numberOfLines                             = 1
-        label.text                                      = "Nome"
+        label.text                                      = "Name"
         label.font                                      = CompareFonts.cellLabel
         
         return label
@@ -56,7 +56,7 @@ open class CustomerTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor                                 = UIColor.black
         label.numberOfLines                             = 1
-        label.text                                      = "CPF/CNPJ"
+        label.text                                      = "ID"
         label.font                                      = CompareFonts.cellLabel
         
         return label
@@ -81,7 +81,7 @@ open class CustomerTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor                                 = UIColor.black
         label.numberOfLines                             = 1
-        label.text                                      = "Placa"
+        label.text                                      = "Plate"
         label.font                                      = CompareFonts.cellLabel
         
         return label
@@ -106,7 +106,7 @@ open class CustomerTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor                                 = UIColor.black
         label.numberOfLines                             = 1
-        label.text                                      = "Vigencia"
+        label.text                                      = "Period"
         label.font                                      = CompareFonts.cellLabel
         
         return label
@@ -131,7 +131,7 @@ open class CustomerTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor                                 = UIColor.black
         label.numberOfLines                             = 1
-        label.text                                      = "Seguradora"
+        label.text                                      = "Insurance Company"
         label.font                                      = CompareFonts.cellLabel
         
         return label

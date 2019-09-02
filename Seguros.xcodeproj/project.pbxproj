@@ -15,6 +15,11 @@
 		B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066A205F145900046D9E /* CustomerTableViewCell.swift */; };
 		B60D066E205F41FA00046D9E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066D205F41FA00046D9E /* Customer.swift */; };
 		B60D06702061F7C900046D9E /* CompareFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D066F2061F7C900046D9E /* CompareFonts.swift */; };
+		B67B0AE1231D90E100506AB3 /* customers.json in Resources */ = {isa = PBXBuildFile; fileRef = B67B0AE0231D90E100506AB3 /* customers.json */; };
+		B67B0AE4231DA0FB00506AB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B0AE2231DA0FB00506AB3 /* MainViewController.swift */; };
+		B67B0AE5231DA0FB00506AB3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */; };
+		B67B0AE9231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */; };
+		B67B0AEA231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		B60D066A205F145900046D9E /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		B60D066D205F41FA00046D9E /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		B60D066F2061F7C900046D9E /* CompareFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareFonts.swift; sourceTree = "<group>"; };
+		B67B0AE0231D90E100506AB3 /* customers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customers.json; sourceTree = "<group>"; };
+		B67B0AE2231DA0FB00506AB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInterfaceBuilderViewController.swift; sourceTree = "<group>"; };
+		B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInterfaceBuilderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +70,11 @@
 		B60D0653205ECA6400046D9E /* Seguros */ = {
 			isa = PBXGroup;
 			children = (
+				B67B0AE6231DA50500506AB3 /* Customer Interface Builder */,
+				B6DC5AD4231861B400F8809B /* Main */,
 				B60D066C205F41E200046D9E /* Model */,
 				B60D0669205EEFAE00046D9E /* Resources */,
-				B60D0668205EED4500046D9E /* Customer */,
+				B60D0668205EED4500046D9E /* Customer Autolayout */,
 				B60D0654205ECA6400046D9E /* AppDelegate.swift */,
 				B60D0658205ECA6400046D9E /* Main.storyboard */,
 				B60D065D205ECA6400046D9E /* LaunchScreen.storyboard */,
@@ -72,18 +84,19 @@
 			path = Seguros;
 			sourceTree = "<group>";
 		};
-		B60D0668205EED4500046D9E /* Customer */ = {
+		B60D0668205EED4500046D9E /* Customer Autolayout */ = {
 			isa = PBXGroup;
 			children = (
 				B60D0656205ECA6400046D9E /* CustomerViewController.swift */,
 				B60D066A205F145900046D9E /* CustomerTableViewCell.swift */,
 			);
-			path = Customer;
+			path = "Customer Autolayout";
 			sourceTree = "<group>";
 		};
 		B60D0669205EEFAE00046D9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B67B0AE0231D90E100506AB3 /* customers.json */,
 				B60D065B205ECA6400046D9E /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -95,6 +108,24 @@
 				B60D066D205F41FA00046D9E /* Customer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B67B0AE6231DA50500506AB3 /* Customer Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */,
+				B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */,
+			);
+			path = "Customer Interface Builder";
+			sourceTree = "<group>";
+		};
+		B6DC5AD4231861B400F8809B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B67B0AE2231DA0FB00506AB3 /* MainViewController.swift */,
+				B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67B0AE1231D90E100506AB3 /* customers.json in Resources */,
 				B60D065F205ECA6400046D9E /* LaunchScreen.storyboard in Resources */,
+				B67B0AEA231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib in Resources */,
+				B67B0AE5231DA0FB00506AB3 /* MainViewController.xib in Resources */,
 				B60D065C205ECA6400046D9E /* Assets.xcassets in Resources */,
 				B60D065A205ECA6400046D9E /* Main.storyboard in Resources */,
 			);
@@ -171,7 +205,9 @@
 			files = (
 				B60D0657205ECA6400046D9E /* CustomerViewController.swift in Sources */,
 				B60D0655205ECA6400046D9E /* AppDelegate.swift in Sources */,
+				B67B0AE9231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift in Sources */,
 				B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */,
+				B67B0AE4231DA0FB00506AB3 /* MainViewController.swift in Sources */,
 				B60D06702061F7C900046D9E /* CompareFonts.swift in Sources */,
 				B60D066E205F41FA00046D9E /* Customer.swift in Sources */,
 			);
