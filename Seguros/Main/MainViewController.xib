@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Seguros" customModuleProvider="target">
             <connections>
+                <outlet property="listOfCustomersAutolayoutButton" destination="x2F-jf-UuO" id="chk-jO-G4w"/>
+                <outlet property="listOfCustomersInterfaceBuilderButton" destination="ani-6v-xJS" id="Kpm-mL-ftC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,15 +23,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-Sb-zI6">
-                    <rect key="frame" x="37.5" y="269.5" width="300" height="128"/>
+                    <rect key="frame" x="37.5" y="179" width="300" height="325"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ani-6v-xJS">
-                            <rect key="frame" x="25.5" y="20" width="249" height="30"/>
-                            <state key="normal" title="List of Customers (Interface Builder)"/>
+                            <rect key="frame" x="50" y="28" width="200" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Z92-bt-FfN"/>
+                                <constraint firstAttribute="width" constant="200" id="sg9-zR-PaV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                            <state key="normal" title="Interface Builder">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="listOfCustomersInterfaceBuilderTouched:" destination="-1" eventType="touchUpInside" id="QxL-jI-tLK"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-jf-UuO">
-                            <rect key="frame" x="45.5" y="78" width="209" height="30"/>
-                            <state key="normal" title="List of Customers (Autolayout)"/>
+                            <rect key="frame" x="50" y="163" width="200" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="AEw-rc-bsg"/>
+                                <constraint firstAttribute="width" constant="200" id="PIV-wa-qAZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                            <state key="normal" title="Coded Constraints">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="listOfCustomersAutoLayoutTouched:" destination="-1" eventType="touchUpInside" id="knM-cw-3Yc"/>
                             </connections>
@@ -37,21 +56,30 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="ani-6v-xJS" firstAttribute="top" secondItem="RUe-Sb-zI6" secondAttribute="top" constant="20" id="Hqy-x2-wfi"/>
+                        <constraint firstItem="ani-6v-xJS" firstAttribute="top" secondItem="RUe-Sb-zI6" secondAttribute="top" constant="28" id="Hqy-x2-wfi"/>
                         <constraint firstAttribute="width" constant="300" id="KdL-8J-Ct5"/>
                         <constraint firstItem="ani-6v-xJS" firstAttribute="centerX" secondItem="RUe-Sb-zI6" secondAttribute="centerX" id="S00-jT-jQX"/>
-                        <constraint firstAttribute="bottom" secondItem="x2F-jf-UuO" secondAttribute="bottom" constant="20" id="Y9N-18-9eY"/>
+                        <constraint firstAttribute="bottom" secondItem="x2F-jf-UuO" secondAttribute="bottom" constant="62" id="Y9N-18-9eY"/>
                         <constraint firstItem="x2F-jf-UuO" firstAttribute="centerX" secondItem="RUe-Sb-zI6" secondAttribute="centerX" id="qxt-tj-3VZ"/>
-                        <constraint firstAttribute="height" constant="128" id="zOU-Cx-iej"/>
+                        <constraint firstAttribute="height" constant="325" id="zOU-Cx-iej"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customers List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-Q4-cj7">
+                    <rect key="frame" x="129" y="94" width="117.5" height="20"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="RUe-Sb-zI6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LEs-Ao-N7H"/>
+                <constraint firstItem="bzN-Q4-cj7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AmC-TW-jbC"/>
+                <constraint firstItem="RUe-Sb-zI6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="8" id="LEs-Ao-N7H"/>
                 <constraint firstItem="RUe-Sb-zI6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tkv-ma-kWn"/>
+                <constraint firstItem="bzN-Q4-cj7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="74" id="rWJ-nZ-PXb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

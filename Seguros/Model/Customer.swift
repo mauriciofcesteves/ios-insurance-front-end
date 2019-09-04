@@ -8,6 +8,7 @@
 
 import UIKit
 
+/** Customer class */
 struct Customer: Codable {
     //register id (database id)
     let id: Int

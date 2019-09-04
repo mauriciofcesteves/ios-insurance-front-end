@@ -20,6 +20,8 @@
 		B67B0AE5231DA0FB00506AB3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */; };
 		B67B0AE9231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */; };
 		B67B0AEA231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */; };
+		B6ECA53F232036B70081509E /* CustomerInterfaceBuilderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ECA53D232036B70081509E /* CustomerInterfaceBuilderTableViewCell.swift */; };
+		B6ECA540232036B70081509E /* CustomerInterfaceBuilderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6ECA53E232036B70081509E /* CustomerInterfaceBuilderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInterfaceBuilderViewController.swift; sourceTree = "<group>"; };
 		B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInterfaceBuilderViewController.xib; sourceTree = "<group>"; };
+		B6ECA53D232036B70081509E /* CustomerInterfaceBuilderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInterfaceBuilderTableViewCell.swift; sourceTree = "<group>"; };
+		B6ECA53E232036B70081509E /* CustomerInterfaceBuilderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInterfaceBuilderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +74,11 @@
 		B60D0653205ECA6400046D9E /* Seguros */ = {
 			isa = PBXGroup;
 			children = (
+				B60D066C205F41E200046D9E /* Model */,
 				B67B0AE6231DA50500506AB3 /* Customer Interface Builder */,
 				B6DC5AD4231861B400F8809B /* Main */,
-				B60D066C205F41E200046D9E /* Model */,
 				B60D0669205EEFAE00046D9E /* Resources */,
-				B60D0668205EED4500046D9E /* Customer Autolayout */,
+				B60D0668205EED4500046D9E /* Customer */,
 				B60D0654205ECA6400046D9E /* AppDelegate.swift */,
 				B60D0658205ECA6400046D9E /* Main.storyboard */,
 				B60D065D205ECA6400046D9E /* LaunchScreen.storyboard */,
@@ -84,13 +88,13 @@
 			path = Seguros;
 			sourceTree = "<group>";
 		};
-		B60D0668205EED4500046D9E /* Customer Autolayout */ = {
+		B60D0668205EED4500046D9E /* Customer */ = {
 			isa = PBXGroup;
 			children = (
 				B60D0656205ECA6400046D9E /* CustomerViewController.swift */,
 				B60D066A205F145900046D9E /* CustomerTableViewCell.swift */,
 			);
-			path = "Customer Autolayout";
+			path = Customer;
 			sourceTree = "<group>";
 		};
 		B60D0669205EEFAE00046D9E /* Resources */ = {
@@ -113,6 +117,7 @@
 		B67B0AE6231DA50500506AB3 /* Customer Interface Builder */ = {
 			isa = PBXGroup;
 			children = (
+				B6ECA52B231F114B0081509E /* Cells */,
 				B67B0AE7231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift */,
 				B67B0AE8231DA52100506AB3 /* CustomerInterfaceBuilderViewController.xib */,
 			);
@@ -126,6 +131,15 @@
 				B67B0AE3231DA0FB00506AB3 /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B6ECA52B231F114B0081509E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B6ECA53D232036B70081509E /* CustomerInterfaceBuilderTableViewCell.swift */,
+				B6ECA53E232036B70081509E /* CustomerInterfaceBuilderTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				B67B0AE5231DA0FB00506AB3 /* MainViewController.xib in Resources */,
 				B60D065C205ECA6400046D9E /* Assets.xcassets in Resources */,
 				B60D065A205ECA6400046D9E /* Main.storyboard in Resources */,
+				B6ECA540232036B70081509E /* CustomerInterfaceBuilderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +221,7 @@
 				B60D0657205ECA6400046D9E /* CustomerViewController.swift in Sources */,
 				B60D0655205ECA6400046D9E /* AppDelegate.swift in Sources */,
 				B67B0AE9231DA52100506AB3 /* CustomerInterfaceBuilderViewController.swift in Sources */,
+				B6ECA53F232036B70081509E /* CustomerInterfaceBuilderTableViewCell.swift in Sources */,
 				B60D066B205F145900046D9E /* CustomerTableViewCell.swift in Sources */,
 				B67B0AE4231DA0FB00506AB3 /* MainViewController.swift in Sources */,
 				B60D06702061F7C900046D9E /* CompareFonts.swift in Sources */,
